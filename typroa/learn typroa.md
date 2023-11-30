@@ -31,7 +31,6 @@
     e^{\pi i} + 1 = 0\
     $$
     
-
 12. **插入代码： Ctrl + Shift + K**
 
     ```c++
@@ -46,7 +45,7 @@
 
 13. **插入图片： Ctrl + Shift + I**
 
-    ![](C:\Users\Mars\Desktop\20200621170106_mttup.jpg)
+    ![](p0.jpg)
 
 14. **返回顶部/底部： Ctrl + Home/End**
 
