@@ -45,7 +45,7 @@
 
 13. **插入图片： Ctrl + Shift + I**
 
-    **![](p0.jpg)**
+    **![](https://github.com/Go-Yang/Learning/blob/main/typroa/p1.JPG)**
 
 14. **返回顶部/底部： Ctrl + Home/End**
 
