@@ -1,0 +1,10 @@
+^G:\GIT_REPO\LEARNING\LEARNJSON\CMAKELISTS.TXT
+setlocal
+D:\cmake\bin\cmake.exe -SG:/git_repo/Learning/learnjson -BG:/git_repo/Learning/learnjson/build --check-stamp-file G:/git_repo/Learning/learnjson/build/CMakeFiles/generate.stamp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal & call :cmErrorLevel %errorlevel% & goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd
