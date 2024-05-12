@@ -6,7 +6,7 @@ set(CMAKE_CXX_STANDARD 11)
 set(CMAKE_CXX_STANDARD_REQUIRED ON)
 
 # 添加头文件目录
-include_directories(G:\\git_repo\\Learning\\learnjson\\include\\json)
+include_directories(G:\\git_repo\\Learning\\learnjson\\include)
 include_directories(G:\\git_repo\\Learning\\learnjson\\include\\opencv455\\include)
 
 # 添加源文件
