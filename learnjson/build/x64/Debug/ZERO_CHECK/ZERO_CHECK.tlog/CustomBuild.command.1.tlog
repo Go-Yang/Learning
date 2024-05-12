@@ -1,6 +1,6 @@
 ^G:\GIT_REPO\LEARNING\LEARNJSON\BUILD\CMAKEFILES\7C68439B121D20F2614510253B0EADB8\GENERATE.STAMP.RULE
 setlocal
-D:\cmake\bin\cmake.exe -SG:/git_repo/Learning/learnjson -BG:/git_repo/Learning/learnjson/build --check-stamp-list CMakeFiles/generate.stamp.list --vs-solution-file G:/git_repo/Learning/learnjson/build/jsonpractice.sln
+D:\cmake\bin\cmake.exe -SG:/git_repo/Learning/learnjson -BG:/git_repo/Learning/learnjson/build --check-stamp-list CMakeFiles/generate.stamp.list --vs-solution-file G:/git_repo/Learning/learnjson/build/learnjson.sln
 if %errorlevel% neq 0 goto :cmEnd
 :cmEnd
 endlocal & call :cmErrorLevel %errorlevel% & goto :cmDone
