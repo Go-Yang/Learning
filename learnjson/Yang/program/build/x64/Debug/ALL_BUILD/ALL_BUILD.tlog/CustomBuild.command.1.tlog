@@ -1,0 +1,10 @@
+^C:\USERS\MARS\DESKTOP\LEARNJSON\PROGRAM\CMAKELISTS.TXT
+setlocal
+C:\Users\Mars\Desktop\learnjson\cmake\bin\cmake.exe -SC:/Users/Mars/Desktop/learnjson/program -BC:/Users/Mars/Desktop/learnjson/program/build --check-stamp-file C:/Users/Mars/Desktop/learnjson/program/build/CMakeFiles/generate.stamp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal & call :cmErrorLevel %errorlevel% & goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd

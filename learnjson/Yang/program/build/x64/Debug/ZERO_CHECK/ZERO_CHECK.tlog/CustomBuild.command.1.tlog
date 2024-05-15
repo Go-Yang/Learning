@@ -1,0 +1,10 @@
+^C:\USERS\MARS\DESKTOP\LEARNJSON\PROGRAM\BUILD\CMAKEFILES\14840F9498F14413DC4F2E9E11B81A1E\GENERATE.STAMP.RULE
+setlocal
+C:\Users\Mars\Desktop\learnjson\cmake\bin\cmake.exe -SC:/Users/Mars/Desktop/learnjson/program -BC:/Users/Mars/Desktop/learnjson/program/build --check-stamp-list CMakeFiles/generate.stamp.list --vs-solution-file C:/Users/Mars/Desktop/learnjson/program/build/Program.sln
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal & call :cmErrorLevel %errorlevel% & goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd
