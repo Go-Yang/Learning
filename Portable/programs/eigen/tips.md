@@ -1,5 +1,11 @@
-1. C 中const修饰的变量叫常变量，是变量，可以不初始化
-    const int a = 10;
-    int array[a] = {} --- 错误
+1. 矩阵和向量的创建
+创建矩阵和向量：
 
-2. C++ 中
+
+Eigen::MatrixXd mat(2, 2); // 2x2 矩阵
+Eigen::VectorXd vec(2);     // 2 维向量
+使用初始化列表：
+
+cpp
+复制代码
+Eigen::MatrixXd mat = (Eigen::MatrixXd(2, 2) << 1, 2, 3, 4).finished();

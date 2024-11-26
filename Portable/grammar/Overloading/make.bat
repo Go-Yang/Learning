@@ -4,11 +4,11 @@ REM 获取当前目录
 set "current_dir=%cd%"
 
 REM 设置 CMake 和 MinGW 的路径变量
-set "CMAKE_PATH=%current_dir%\..\..\buildTools\cmake\bin"
-set "MINGW_PATH=%current_dir%\..\..\buildTools\mingw64\bin"
+set "CMAKE_PATH=%current_dir%\\..\\..\\buildTools\\cmake\\bin"
+set "MINGW_PATH=%current_dir%\\..\\..\\buildTools\\mingw64\\bin"
 
-REM 获取当前目录
-set "current_dir=%cd%"
+REM 添加 MinGW 和 CMake 的路径到 PATH
+set "PATH=%MINGW_PATH%;%CMAKE_PATH%;%PATH%"
 
 REM 设置构建类型（可以通过参数传入，例如 Debug 或 Release）
 set "build_type=%1"
@@ -38,6 +38,13 @@ cd build
 REM 生成构建系统文件
 echo Configuring project...
 "%CMAKE_PATH%\cmake.exe" -G "MinGW Makefiles" -DCMAKE_BUILD_TYPE=%build_type% -DCMAKE_MAKE_PROGRAM="%MINGW_PATH%\mingw32-make.exe" -DCMAKE_C_COMPILER="%MINGW_PATH%\gcc.exe" -DCMAKE_CXX_COMPILER="%MINGW_PATH%\g++.exe" ..
+@REM "%CMAKE_PATH%\cmake.exe" -G "MinGW Makefiles" ^
+@REM     -DCMAKE_BUILD_TYPE=%build_type% ^
+@REM     -DCMAKE_MAKE_PROGRAM="%MINGW_PATH%\mingw32-make.exe" ^
+@REM     -DCMAKE_C_COMPILER="%MINGW_PATH%\x86_64-w64-mingw32-gcc.exe" ^
+@REM     -DCMAKE_CXX_COMPILER="%MINGW_PATH%\x86_64-w64-mingw32-g++.exe" ^
+@REM     ..
+
 if errorlevel 1 (
     echo CMake configuration failed.
     exit /b 1
@@ -58,6 +65,3 @@ if exist .\program.exe (
 ) else (
     echo Executable not found, skipping run step.
 )
-
-
-

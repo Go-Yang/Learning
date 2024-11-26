@@ -36,13 +36,8 @@ if errorlevel 1 (
 cd build
 
 REM 生成构建系统文件
-echo Configuring project... 
-"%CMAKE_PATH%\cmake.exe" -G "MinGW Makefiles" ^
-        -DCMAKE_BUILD_TYPE=%build_type% ^
-        -DCMAKE_MAKE_PROGRAM="%MINGW_PATH%\mingw32-make.exe" ^
-        -DCMAKE_C_COMPILER="%MINGW_PATH%\gcc.exe" ^
-        -DCMAKE_CXX_COMPILER="%MINGW_PATH%\g++.exe" ..
-
+echo Configuring project...
+"%CMAKE_PATH%\cmake.exe" -G "MinGW Makefiles" -DCMAKE_BUILD_TYPE=%build_type% -DCMAKE_MAKE_PROGRAM="%MINGW_PATH%\mingw32-make.exe" -DCMAKE_C_COMPILER="%MINGW_PATH%\gcc.exe" -DCMAKE_CXX_COMPILER="%MINGW_PATH%\g++.exe" ..
 @REM "%CMAKE_PATH%\cmake.exe" -G "MinGW Makefiles" ^
 @REM     -DCMAKE_BUILD_TYPE=%build_type% ^
 @REM     -DCMAKE_MAKE_PROGRAM="%MINGW_PATH%\mingw32-make.exe" ^
@@ -62,6 +57,8 @@ if errorlevel 1 (
     echo Build failed.
     exit /b 1
 )
+
+chcp 65001
 
 REM 运行程序
 if exist .\program.exe (

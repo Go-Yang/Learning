@@ -16,7 +16,7 @@ int main ()
    cin.getline(data, 100);
  
    // 向文件写入用户输入的数据
-   outfile << data << "\n"<< endl;
+   outfile << data << endl;
  
    cout << "Enter your age: "; 
    cin >> data;

@@ -1,7 +1,7 @@
 #include <iostream>
-#include <mingw.thread.h>
-#include <mingw.mutex.h>
-#include <mingw.condition_variable.h>
+#include <thread>
+#include <mutex>
+#include <condition_variable>
 
 std::mutex mtx;
 std::condition_variable cv;
